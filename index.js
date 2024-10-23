@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const dotenv = require('dotenv');
 
 app.get('/home', (req, res)=> {
     res.json({
@@ -7,6 +8,6 @@ app.get('/home', (req, res)=> {
     });
 })
 
-app.listen(3000, ()=> {
+app.listen(process.env.PORT, ()=> {
     console.log('Server up an running');
 })
